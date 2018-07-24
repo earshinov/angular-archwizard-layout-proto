@@ -53,10 +53,20 @@ aw-wizard-navigation-bar.horizontal {
     transition: 0.25s;
     border-radius: 100%;
   }
+  .state-circle-hover(@dot-width, @dot-height, @dot-border-width) {
+  }
+  .state-circle-nohover(@dot-width, @dot-height, @dot-border-width) {
+  }
 
   .state-circle-with-border(@dot-border-width, @circle-color) {
     border-width: @dot-border-width;
     border-style: solid;
+    border-color: @circle-color;
+  }
+  .state-circle-with-border-hover(@dot-border-width, @circle-color) {
+    border-color: darken(@circle-color, 10%);
+  }
+  .state-circle-with-border-nohover(@dot-border-width, @circle-color) {
     border-color: @circle-color;
   }
 
@@ -64,14 +74,34 @@ aw-wizard-navigation-bar.horizontal {
     .state-circle-with-border(@dot-border-width, @circle-color);
     color: @circle-color;
   }
+  .state-circle-with-border-and-content-hover(@dot-border-width, @circle-color) {
+    .state-circle-with-border-hover(@dot-border-width, @circle-color);
+    color: darken(@circle-color, 10%);
+  }
+  .state-circle-with-border-and-content-nohover(@dot-border-width, @circle-color) {
+    .state-circle-with-border-nohover(@dot-border-width, @circle-color);
+    color: @circle-color;
+  }
 
   .state-circle-with-background(@circle-color) {
+    background-color: @circle-color;
+  }
+  .state-circle-with-background-hover(@circle-color) {
+    background-color: darken(@circle-color, 5%);
+  }
+  .state-circle-with-background-nohover(@circle-color) {
     background-color: @circle-color;
   }
 
   .state-circle-with-background-and-content(@circle-color) {
     .state-circle-with-background(@circle-color);
     color: black;
+  }
+  .state-circle-with-background-and-content-hover(@circle-color) {
+    .state-circle-with-background-hover(@circle-color);
+  }
+  .state-circle-with-background-and-content-nohover(@circle-color) {
+    .state-circle-with-background-nohover(@circle-color);
   }
 
   &.large-empty-symbols {
