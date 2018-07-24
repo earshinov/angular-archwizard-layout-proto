@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ArchWizard stripped</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  </head>
+  <body>
+
+    <aw-wizard  class="horizontal">
+      <aw-wizard-navigation-bar class="horizontal large-empty-symbols">
+        <ul class="steps-indicator steps-3">
+          <li class="done navigable" step-symbol="" style="font-family: FontAwesome;">
+            <div><a>Steptitle 1</a></div>
+          </li>
+          <li class="current" step-symbol="" style="font-family: FontAwesome;">
+            <div><a>Steptitle 2</a></div>
+          </li>
+          <li class="default" step-symbol="" style="font-family: FontAwesome;">
+            <div><a >Steptitle 3</a></div>
+          </li>
+        </ul>
+      </aw-wizard-navigation-bar>
+      <div class="wizard-steps horizontal" >
+        <aw-wizard-step   hidden="">
+          <div class="centered-content">
+            <div>Content: Step 1</div>
+            <div class="btn-group">
+              <button awnextstep="" class="btn btn-secondary" type="button">Continue</button>
+            </div>
+          </div>
+        </aw-wizard-step>
+        <aw-wizard-step>
+          <div class="centered-content">
+            <div>Content: Step 2</div>
+            <div class="btn-group">
+              <button awpreviousstep="" class="btn btn-secondary" type="button">Back</button>
+              <button awnextstep="" class="btn btn-secondary" type="button">Continue</button>
+            </div>
+          </div>
+        </aw-wizard-step>
+        <aw-wizard-step   hidden="">
+          <div class="centered-content">
+            <div>Content: Step 3</div>
+            <div class="btn-group">
+              <button awpreviousstep="" class="btn btn-secondary" type="button">Back</button>
+              <button awresetwizard="" class="btn btn-secondary" type="button">Reset</button>
+            </div>
+          </div>
+        </aw-wizard-step>
+      </div>
+    </aw-wizard>
+
+    <aw-wizard  class="vertical">
+      <aw-wizard-navigation-bar class="vertical large-empty-symbols">
+        <ul class="steps-indicator steps-3">
+          <li class="done navigable" step-symbol="" style="font-family: FontAwesome;">
+            <div><a>Steptitle 1</a></div>
+          </li>
+          <li class="current" step-symbol="" style="font-family: FontAwesome;">
+            <div><a>Steptitle 2</a></div>
+          </li>
+          <li class="default" step-symbol="" style="font-family: FontAwesome;">
+            <div><a>Steptitle 3</a></div>
+          </li>
+        </ul>
+      </aw-wizard-navigation-bar>
+      <div class="wizard-steps vertical" >
+        <aw-wizard-step   hidden="">
+          <div class="centered-content">
+            <div>Content: Step 1</div>
+            <div class="btn-group">
+              <button awnextstep="" class="btn btn-secondary" type="button">Continue</button>
+            </div>
+          </div>
+        </aw-wizard-step>
+        <aw-wizard-step>
+          <div class="centered-content">
+            <div>Content: Step 2</div>
+            <div class="btn-group">
+              <button awpreviousstep="" class="btn btn-secondary" type="button">Back</button>
+              <button awnextstep="" class="btn btn-secondary" type="button">Continue</button>
+            </div>
+          </div>
+        </aw-wizard-step>
+        <aw-wizard-step   hidden="">
+          <div class="centered-content">
+            <div>Content: Step 3</div>
+            <div class="btn-group">
+              <button awpreviousstep="" class="btn btn-secondary" type="button">Back</button>
+              <button awresetwizard="" class="btn btn-secondary" type="button">Reset</button>
+            </div>
+          </div>
+        </aw-wizard-step>
+      </div>
+    </aw-wizard>
+
+  </body>
+</html>
