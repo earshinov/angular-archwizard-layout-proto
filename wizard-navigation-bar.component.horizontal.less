@@ -120,7 +120,7 @@ aw-wizard-navigation-bar.horizontal {
       }
 
       // default steps shouldn't change when hovered, because they aren't clickable
-      li.default a:hover {
+      li.default .label:hover {
         color: @wz-color-current;
       }
 
@@ -215,7 +215,8 @@ aw-wizard-navigation-bar.horizontal {
       pointer-events: none;
       text-align: center;
 
-      a {
+      .label {
+        display: inline-block;
         color: @wz-color-current;
         line-height: @text-height;
         font-size: @text-height;
