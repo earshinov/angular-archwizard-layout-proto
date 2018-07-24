@@ -113,11 +113,9 @@ aw-wizard-navigation-bar.horizontal {
           .line(@big-dot-width, @big-dot-height, @wz-color-default);
         }
 
-        &:after {
+        .step-indicator {
           .state-circle(@big-dot-width, @big-dot-height, @dot-border-width);
           .state-circle-with-border-and-content(@dot-border-width, @wz-color-default);
-
-          content: attr(step-symbol);
         }
       }
 
@@ -126,19 +124,19 @@ aw-wizard-navigation-bar.horizontal {
         color: @wz-color-current;
       }
 
-      li.current:after {
+      li.current .step-indicator {
         .state-circle-with-border-and-content(@dot-border-width, @wz-color-current);
       }
 
-      li.done:after {
+      li.done .step-indicator {
         .state-circle-with-border-and-content(@dot-border-width, @wz-color-done);
       }
 
-      li.optional:after {
+      li.optional .step-indicator {
         .state-circle-with-border-and-content(@dot-border-width, @wz-color-optional);
       }
 
-      li.editing:after {
+      li.editing .step-indicator {
         .state-circle-with-border-and-content(@dot-border-width, @wz-color-editing);
       }
     }
@@ -216,7 +214,7 @@ aw-wizard-navigation-bar.horizontal {
       padding: @text-padding-bottom 0 0 0;
       pointer-events: none;
 
-      div {
+      .label {
         display: flex;
         flex-direction: column;
         align-items: center;
