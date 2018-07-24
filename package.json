@@ -1,0 +1,16 @@
+{
+  "name": "archwizard-stripped",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Evgeny Arshinov <earshinov@nvidia.com>",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.24.6",
+    "debounce": "^1.1.0",
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^5.0.1",
+    "less": "^3.8.0",
+    "through2": "^2.0.3"
+  }
+}
