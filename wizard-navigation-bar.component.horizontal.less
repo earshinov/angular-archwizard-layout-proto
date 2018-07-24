@@ -119,26 +119,18 @@ aw-wizard-navigation-bar.horizontal {
         }
       }
 
+      li.current .step-indicator { .state-circle-with-border-and-content(@dot-border-width, @wz-color-current); }
+      li.done .step-indicator { .state-circle-with-border-and-content(@dot-border-width, @wz-color-done); }
+      li.optional .step-indicator { .state-circle-with-border-and-content(@dot-border-width, @wz-color-optional); }
+      li.editing .step-indicator { .state-circle-with-border-and-content(@dot-border-width, @wz-color-editing); }
+
+      li.current a:hover .step-indicator { .state-circle-with-border-and-content-hover(@dot-border-width, @wz-color-current); }
+      li.done a:hover .step-indicator { .state-circle-with-border-and-content-hover(@dot-border-width, @wz-color-done); }
+      li.optional a:hover .step-indicator { .state-circle-with-border-and-content-hover(@dot-border-width, @wz-color-optional); }
+      li.editing a:hover .step-indicator { .state-circle-with-border-and-content-hover(@dot-border-width, @wz-color-editing); }
+
       // default steps shouldn't change when hovered, because they aren't clickable
-      li.default .label:hover {
-        color: @wz-color-current;
-      }
-
-      li.current .step-indicator {
-        .state-circle-with-border-and-content(@dot-border-width, @wz-color-current);
-      }
-
-      li.done .step-indicator {
-        .state-circle-with-border-and-content(@dot-border-width, @wz-color-done);
-      }
-
-      li.optional .step-indicator {
-        .state-circle-with-border-and-content(@dot-border-width, @wz-color-optional);
-      }
-
-      li.editing .step-indicator {
-        .state-circle-with-border-and-content(@dot-border-width, @wz-color-editing);
-      }
+      li.default a:hover .step-indicator { .state-circle-with-border-and-content-nohover(@dot-border-width, @wz-color-editing); }
     }
   }
 
@@ -211,12 +203,17 @@ aw-wizard-navigation-bar.horizontal {
     li {
       position: relative;
       margin: 0;
-      padding: @text-padding-bottom 0 0 0;
+      padding: 0;
       pointer-events: none;
       text-align: center;
 
+      a {
+        cursor: pointer;
+      }
+
       .label {
         display: inline-block;
+        padding-top: @text-padding-bottom;
         color: @wz-color-current;
         line-height: @text-height;
         font-size: @text-height;
@@ -225,11 +222,22 @@ aw-wizard-navigation-bar.horizontal {
         text-align: center;
         font-weight: bold;
         transition: 0.25s;
-        cursor: pointer;
+      }
+    }
 
-        &:hover {
-          color: darken(@wz-color-current, 20%);
-        }
+    li a:hover .label {
+      color: darken(@wz-color-current, 20%);
+    }
+
+    // default steps shouldn't change when hovered, because they aren't clickable
+    li.default {
+
+      a {
+        cursor: auto;
+      }
+
+      .label {
+        color: @wz-color-current;
       }
     }
 
@@ -238,4 +246,3 @@ aw-wizard-navigation-bar.horizontal {
     }
   }
 }
-
